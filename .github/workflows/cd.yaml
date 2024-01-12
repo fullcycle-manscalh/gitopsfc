@@ -35,8 +35,8 @@ jobs:
 
     - name: Commit
       run: |
-        git config --local user.email "github-actions[bot]@users.noreply.github.com"
-        git config --local user.name "github-actions[bot]"
+        git config --local user.email "salomao.calheiros@gmail.com"
+        git config --local user.name "Salomão Gonçalves Calheiros"
         git commit -am "Bump docker version"
 
     - name: Push
@@ -44,4 +44,4 @@ jobs:
       with:
         force_with_lease: true
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: ${{ github.ref }}
+        repository: fullcycle-manscalh/gitopsfc
