@@ -7,5 +7,4 @@ EXPOSE 8080
 FROM scratch
 WORKDIR /app
 COPY --from=build /app/server .
-
-CMD [ "./server" ]
+ENTRYPOINT [ "./server" ]
