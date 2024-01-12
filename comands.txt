@@ -1,0 +1,8 @@
+go mod init webserverfc
+go run main.go
+
+docker build -t manscalh/gitopsfc:latest .
+docker run --rm -p 8080:8080 manscalh/gitopsfc:latest
+
+docker login
+docker push manscalh/gitopsfc:latest
