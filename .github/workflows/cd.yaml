@@ -37,15 +37,16 @@ jobs:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
       run: |
         cd k8s
-        kustomize edit set image goserver=$DOCKER_USERNAME/gitopsfc:$github.sha
+        kustomize edit set image goserver=$DOCKER_USERNAME/gitopsfc:$GITHUB.SHA
+
 
     - name: Commit
       run: |
-        git config --local user.email "salomao.calheiros@gmail.com"
-        git config --local user.name "Salomão Gonçalves Calheiros"
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
         git commit -am "Bump docker version"
 
-    - name: Push Permission new teste
+    - name: Push 
       uses: ad-m/github-push-action@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}

@@ -6,3 +6,6 @@ docker run --rm -p 8080:8080 manscalh/gitopsfc:latest
 
 docker login
 docker push manscalh/gitopsfc:latest
+
+ kind create cluster --name=gitopsfc
+ kubectl cluster-info --context kind-gitopsfc
