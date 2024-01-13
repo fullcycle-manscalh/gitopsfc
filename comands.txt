@@ -9,3 +9,7 @@ docker push manscalh/gitopsfc:latest
 
  kind create cluster --name=gitopsfc
  kubectl cluster-info --context kind-gitopsfc
+
+
+kustomize edit set image goserver=manscalh/gitopsfc:Deusehmaisssss
+kubectl get all -n argo-events
