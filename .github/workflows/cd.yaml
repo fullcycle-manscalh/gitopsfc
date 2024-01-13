@@ -1,5 +1,11 @@
 name: CD GitOps
 
+permissions:
+  contents: write
+  pull-requests: write 
+  issues: read
+  packages: none
+
 on: 
   push:
     branches: [main]
@@ -42,7 +48,5 @@ jobs:
     - name: Push Permission
       uses: ad-m/github-push-action@master
       with:
-        permissions: write-all
-        force_with_lease: true
         github_token: ${{ secrets.GITHUB_TOKEN }}
         repository: fullcycle-manscalh/gitopsfc
