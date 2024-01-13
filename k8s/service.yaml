@@ -1,11 +1,10 @@
-apiVersion: apps/v1
-kind: service
+apiVersion: v1
+kind: Service
 metadata:
   name: goserver-service  
 spec:
   selector:
-    matchLabels:
       app: goserver
-    ports:
-    - port: 8080
-      targetPort: 8080
+  ports:
+  - port: 8080
+    targetPort: 8080
