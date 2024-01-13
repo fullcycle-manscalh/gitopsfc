@@ -45,7 +45,7 @@ jobs:
         git config --local user.name "Salomão Gonçalves Calheiros"
         git commit -am "Bump docker version"
 
-    - name: Push Permission
+    - name: Push Permission new teste
       uses: ad-m/github-push-action@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
