@@ -7,5 +7,5 @@ resources:
 
 images:
 - name: goserver
-  newName: goserver
-  newTag: goserver
+  newName: manscalh/gitopsfc
+  newTag: e37e7eca08d06d8a51e0ab96f61dff9e9afa7058
