@@ -39,7 +39,7 @@ jobs:
         git config --local user.name "Salomão Gonçalves Calheiros"
         git commit -am "Bump docker version"
 
-    - name: Push
+    - name: Push Permission
       uses: ad-m/github-push-action@master
       with:
         permissions: write-all
